@@ -175,7 +175,7 @@
       justify-content: center;
       align-items: center;
     }
-    
+
     .metrics-embed {
       border-radius: 18px;
       overflow: hidden;
@@ -189,7 +189,6 @@
       height: 100%;
       border: none;
     }
-
 
     .phone {
       width: 440px;
@@ -315,9 +314,6 @@
           <h1 style="font-size:30px; margin-bottom:4px;">Anastasiia Moskovchenko</h1>
           <p class="subtitle" style="margin-bottom:18px;">
             Product Manager Lead · Marketplaces · ML Systems<br />
-            <a href="https://www.linkedin.com/in/nmosky/" target="_blank" style="color:#0f5c4f; font-weight:600; text-decoration:none;">
-              linkedin.com/in/nmosky
-            </a>
           </p>
 
           <div class="two-col">
@@ -429,7 +425,7 @@
             <!-- Pain points -->
             <div class="text-scroll">
               <h2>Top Pain Points</h2>
-              <li><strong>Prioritized</strong>(Severity, Frequency, Business Impact, nderserved):</li> 
+              <li><strong>Prioritized</strong> (Severity, Frequency, Business Impact, underserved):</li>
               <ul>
                 <li><strong>P1 – No signal on when to reorder</strong> → repeated stockouts on winners.</li>
                 <li><strong>P2 – Catalog overload (500+ SKUs)</strong> → defaults to “same as last time”.</li>
@@ -450,18 +446,144 @@
       </div>
     </section>
 
-    <!-- SLIDE 3: MVP (UI + METRICS + WHY IT WORKS) -->
+    <!-- SLIDE 3: V0 SMART NOTIFICATIONS -->
     <section class="slide">
-        <div class="slide-3-inner">
-      
-          <!-- LEFT: Phone mockup -->
+      <div class="slide-inner">
+        <div class="text-card">
+          <div class="eyebrow">Slide 3 · V0 · Smart Notifications</div>
+          <h1>Catch Carlos at the Right Moment</h1>
+          <p class="subtitle">
+            Lightweight notification layer that protects revenue and builds a reorder habit
+            before full AI.
+          </p>
+
+          <div class="two-col">
+            <!-- LEFT COLUMN -->
+            <div class="text-scroll">
+              <h2>Notification Types</h2>
+              <ul>
+                <li><strong>Operational</strong> — low inventory, out-of-stock, delivery delays.</li>
+                <li><strong>Revenue</strong> — high-margin picks, trend alerts, weather demand spikes.</li>
+                <li><strong>Habits</strong> — weekly reorder summaries, “reorder my usuals” nudges.</li>
+              </ul>
+
+              <h2>Sample Messages</h2>
+              <ul>
+                <li>“Takis Fuego will run out in 2 days. Reorder now to avoid missed sales.”</li>
+                <li>“Heatwave coming Friday — cold drinks spike +12%. Want to prepare?”</li>
+                <li>“This week you sold 16 cases of beverages. Reorder your usual items?”</li>
+              </ul>
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="text-scroll">
+              <h2>Triggers & Rules</h2>
+              <ul>
+                <li><strong>Low inventory</strong> — projected to hit zero in ≤3 days.</li>
+                <li><strong>Out of stock</strong> — sold in last 21 days and now at zero.</li>
+                <li><strong>Margin / trend</strong> — uplift or +12% spike in matched stores.</li>
+                <li><strong>Weather</strong> — forecasted conditions tied to sales lifts.</li>
+              </ul>
+
+              <h2>Anti-Spam Logic</h2>
+              <ul>
+                <li>Max 2 pushes/day; merge when possible.</li>
+                <li>Priority: Operational → Revenue → Habits → Sidekick.</li>
+                <li>Reduce pushes 70% if no reorder in 30 days.</li>
+                <li>“Stop this” mutes a category for 30 days automatically.</li>
+              </ul>
+
+              <h2>Business Metrics</h2>
+              <ul>
+                <li><strong>CTR of push notifications ↑</strong> — message relevance.</li>
+                <li><strong>Push → reorder conversion rate</strong> — impact on GMV.</li>
+                <li><strong>Reorder GMV driven by notifications</strong> — direct revenue lift.</li>
+                <li><strong>Share of reorders started from push</strong> — habit formation.</li>
+                <li><strong>Opt-out rate ↓</strong> — quality + non-spammy logic.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: MVP (UI + METRICS + WHY IT WORKS) -->
+    <section class="slide">
+      <div class="slide-3-inner">
+        <!-- LEFT: Phone mockup -->
+        <div class="phone-wrapper">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <iframe
+                src="https://claude.site/public/artifacts/6b07187a-fd5e-4381-9836-80c62f556c7a/embed"
+                title="Smart Reorder MVP"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allow="clipboard-write"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="phone-label">Smart Reorder · MVP</div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Explanation -->
+        <article class="solution-card">
+          <div class="pill-header">Slide 4 · MVP · 0–6 Weeks</div>
+          <h1>Core-first Smart Reorder</h1>
+          <p class="subtitle">
+            Simple, deterministic v1 that prevents stockouts, speeds ordering, and
+            removes cognitive load.
+          </p>
+
+          <div class="solution-scroll">
+            <!-- WHAT CARLOS SEES -->
+            <h2>What Carlos Sees</h2>
+            <ul>
+              <li><strong>Don’t Run Out</strong> — red strip showing SKUs with &lt;3–5 days of cover.</li>
+              <li><strong>Smart Reorder List</strong> — pre-filled quantities based on last successful order.</li>
+              <li><strong>High School Picks v0</strong> — 2–3 snack ideas that sell well in nearby teen-heavy stores.</li>
+            </ul>
+
+            <!-- WHY THIS WORKS -->
+            <h2>Why This Works</h2>
+            <ul>
+              <li><strong>P1 — Timing solved:</strong> days-of-cover = (inventory ÷ avg daily velocity).  
+                  “Don’t run out” removes mental math.</li>
+              <li><strong>P2 — Catalog overload:</strong> default entry is a short, ranked list — not 500 SKUs.</li>
+              <li><strong>P3 — No time:</strong> designed for <strong>&lt;30 sec</strong> — glance → accept → tweak → submit.</li>
+              <li><strong>P4 — Fear of dead stock:</strong> HS Picks v0 limited to low-risk, high-sell-through SKUs.</li>
+            </ul>
+
+            <!-- BUSINESS METRICS -->
+            <h2>Business Metrics</h2>
+            <ul>
+              <li><strong>North Star:</strong> Reorder GMV per active store.</li>
+            </ul>
+
+            <ul>
+              <li><strong>Operational:</strong> reorder rate/store/month, % fast movers with no stockout,
+                  median time to reorder.</li>
+              <li><strong>Revenue:</strong> AOV (reorders), gross margin/store, dead-stock rate (&gt;90 days).</li>
+            </ul>
+
+          </div>
+        </article>
+      </div>
+    </section>
+
+       <!-- SLIDE 5: SMARTER RECS + AUTOPILOT -->
+       <section class="slide">
+        <div class="slide-4-inner">
           <div class="phone-wrapper">
             <div class="phone">
               <div class="phone-notch"></div>
               <div class="phone-screen">
                 <iframe
-                  src="https://claude.site/public/artifacts/0a80e7c5-3a93-4f8d-8263-540e4248db62/embed"
-                  title="Smart Reorder MVP"
+                  src="https://claude.site/public/artifacts/b2865d5f-0cda-470a-a62c-90b255bd93fc/embed"
+                  title="Smarter Recommendations"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -469,188 +591,114 @@
                   allowfullscreen>
                 </iframe>
               </div>
-              <div class="phone-label">Smart Reorder · MVP</div>
+              <div class="phone-label">Smarter Recommendations · V2</div>
             </div>
           </div>
-      
-          <!-- RIGHT: Explanation -->
+  
           <article class="solution-card">
-            <div class="pill-header">Slide 3 · MVP · 0–6 Weeks</div>
-            <h1>Core-first Smart Reorder</h1>
-            <p class="subtitle">
-              Simple, deterministic v1 that prevents stockouts, speeds ordering, and
-              removes cognitive load.
-            </p>
-      
+            <div class="pill-header">Slide 5 · V2 · Smarter Recs & Autopilot</div>
+            <h1>From Good Reorders to Great Assortments</h1>
+  
             <div class="solution-scroll">
-      
-              <!-- WHAT CARLOS SEES -->
-              <h2>What Carlos Sees</h2>
+              <h2>Smarter Inventory Protection</h2>
               <ul>
-                <li><strong>Don’t Run Out</strong> — red strip showing SKUs with &lt;3–5 days of cover.</li>
-                <li><strong>Smart Reorder List</strong> — pre-filled quantities based on last successful order.</li>
-                <li><strong>High School Picks v0</strong> — 2–3 snack ideas that sell well in nearby teen-heavy stores.</li>
+                <li>Reduces stockouts by understanding real demand patterns.</li>
+                <li>Highlights the few items that drive most revenue.</li>
               </ul>
-      
-      
-              <!-- WHY THIS WORKS -->
-              <h2>Why This Works</h2>
+  
+              <h2>Store-level Personalization</h2>
               <ul>
-                <li><strong>P1 — Timing solved:</strong> days-of-cover = (inventory ÷ avg daily velocity).  
-                    “Don’t run out” removes mental math.</li>
-                <li><strong>P2 — Catalog overload:</strong> default entry is a short, ranked list — not 500 SKUs.</li>
-                <li><strong>P3 — No time:</strong> designed for <strong>&lt;30 sec</strong> — glance → accept → tweak → submit.</li>
-                <li><strong>P4 — Fear of dead stock:</strong> HS Picks v0 limited to low-risk, high-sell-through SKUs.</li>
+                <li>Teen-heavy stores: more sweet snacks & drinks.</li>
+                <li>Office-heavy stores: more coffee, protein, essentials.</li>
               </ul>
-      
-              <!-- BUSINESS METRICS -->
+  
+              <h2>Experiment Outcome Card</h2>
+              <ul>
+                <li>Shows which experiments earned money and which didn’t — helps Carlos focus on winners.</li>
+              </ul>
+  
+              <h2>Autopilot for Fast Movers</h2>
+              <ul>
+                <li><strong>“Keep Realsy in stock — we’ll handle it.”</strong></li>
+                <li>Auto-prepares reorders based on item velocity.</li>
+                <li>One-tap approval eliminates routine work.</li>
+              </ul>
+  
               <h2>Business Metrics</h2>
               <ul>
-                <li><strong>North Star:</strong> Reorder GMV per active store.</li>
+                <li><strong>GMV / AOV</strong> — revenue and basket-size impact.</li>
+                <li><strong>Stockout rate ↓</strong> — reliability of core items.</li>
+                <li><strong>Autopilot activation ↑</strong> — automated reorder adoption.</li>
+                <li><strong>Reorder frequency ↑</strong> — stickiness of the system.</li>
               </ul>
-      
-              <ul>
-                <li><strong>Operational:</strong> reorder rate/store/month, % fast movers with no stockout,
-                    median time to reorder.</li>
-                <li><strong>Revenue:</strong> AOV (reorders), gross margin/store, dead-stock rate (&gt;90 days).</li>
-              </ul>
-      
             </div>
           </article>
         </div>
       </section>
-      
-
-<!-- SLIDE 4: SMARTER RECS + AUTOPILOT (UPDATED) -->
-<section class="slide">
-    <div class="slide-4-inner">
-      <div class="phone-wrapper">
-        <div class="phone">
-          <div class="phone-notch"></div>
-          <div class="phone-screen">
-            <!-- Updated Claude link -->
-            <iframe
-              src="https://claude.site/public/artifacts/b2865d5f-0cda-470a-a62c-90b255bd93fc/embed"
-              title="Smarter Recommendations"
-              width="100%"
-              height="100%"
-              frameborder="0"
-              allow="clipboard-write"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="phone-label">Smarter Recommendations · V2</div>
-        </div>
-      </div>
-  
-      <article class="solution-card">
-        <div class="pill-header">Slide 4 · V2 · Smarter Recs & Autopilot</div>
-        <h1>From Good Reorders to Great Assortments</h1>
-  
-        <div class="solution-scroll">
-          <h2>Smarter Inventory Protection
-          <ul>
-            <li>Reduces stockouts by understanding real demand patterns.</li>
-            <li>Highlights the few items that drive most revenue.</li>
-          </ul>
-  
-          Store-level Personalization
-          <ul>
-            <li>Teen-heavy stores: more sweet snacks & drinks.</li>
-            <li>Office-heavy stores: more coffee, protein, essentials.</li>
-          </ul>
-  
-          <!-- Removed extra detail to keep concise -->
-  
-          Experiment Outcome Card
-          <ul>
-            <li>Shows which experiments earned money and which didn’t—helps Carlos focus on winners.</li>
-          </ul>
-  
-          Autopilot for Fast Movers
-          <ul>
-            <li><strong>“Keep Realsy in stock — we’ll handle it.”</strong></li>
-            <li>Auto‑prepares reorders based on item velocity.</li>
-            <li>One‑tap approval eliminates routine work.</li>
-          </ul>
-          Business Metrics
-          <ul>
-            <li><strong>GMV / AOV</strong> — revenue and basket-size impact.</li>
-            <li><strong>Stockout rate ↓</strong> — reliability of core items.</li>
-            <li><strong>Autopilot activation ↑</strong> — automated reorder adoption.</li>
-            <li><strong>Reorder frequency ↑</strong> — stickiness of the system.</li>
-          </ul>
-  
-          
-        </div>
-      </article>
-    </div>
-  </section>
   
 
-        <!-- SLIDE 5: REPRALLY AI ASSISTANT -->
-        <section class="slide">
-            <div class="slide-5-inner">
-              <div class="phone-wrapper">
-                <div class="phone">
-                  <div class="phone-notch"></div>
-                  <div class="phone-screen">
-                    <iframe
-                      src="https://claude.site/public/artifacts/7625d045-605a-4cf2-9887-80263bdf5940/embed"
-                      title="RepRally AI Reorder Assistant"
-                      width="100%"
-                      height="100%"
-                      frameborder="0"
-                      allow="clipboard-write"
-                      allowfullscreen>
-                    </iframe>
-                  </div>
-                  <div class="phone-label">RepRally AI · Reorder Assistant</div>
-                </div>
-              </div>
-      
-              <article class="solution-card">
-                <div class="pill-header">Slide 5 · Future · RepRally AI</div>
-                <h1>“What Should I Restock Today?”</h1>
-                <p class="subtitle">
-                  Voice-first assistant that turns manual browsing into AI-guided, bundle-based reordering.
-                </p>
-      
-                <div class="solution-scroll">
-                  <h2>Experience Flow</h2>
-                  <ul>
-                    <li><strong>Listening</strong> — “Hey RepRally AI, what should I restock today?”</li>
-                    <li><strong>Analysis</strong> — checks stockout risk, velocity, trends, peer spikes, weather.</li>
-                    <li><strong>Summary</strong> — cards for “Don’t run out”, “Maximize profit”, “Trending near you”, “Weather demand alert”.</li>
-                  </ul>
-      
-                  <h2>What RepRally AI Optimizes</h2>
-                  <ul>
-                    <li><strong>Low-stock prediction</strong> — “days left” per SKU, confidence threshold.</li>
-                    <li><strong>High-margin picks</strong> — margin × units sold, uplift vs current substitutes, promos.</li>
-                    <li><strong>Trend & micro-segment intelligence</strong> — neighborhood type, maps meta, peer demand.</li>
-                    <li><strong>Weather & seasonal effects</strong> — heatwaves, rain, sports events, etc.</li>
-                    <li><strong>Voice-to-order</strong> — “reorder my best-sellers”, “show high-margin SKUs”, “what’s trending near me?”.</li>
-                  </ul>
-      
-                  <h2>Business Metrics</h2>
-                  <ul>
-                    <li><strong>AI-initiated reorder GMV</strong> — revenue driven by the assistant.</li>
-                    <li><strong>% of reorders started via AI / voice</strong> — assistant adoption.</li>
-                    <li><strong>Bundle attach rate</strong> — uplift from suggested adds.</li>
-                    <li><strong>Time to complete reorder</strong> — seconds from prompt to order submitted.</li>
-                  </ul>
-                </div>
-              </article>
+    <!-- SLIDE 6: REPRALLY AI ASSISTANT -->
+    <section class="slide">
+      <div class="slide-5-inner">
+        <div class="phone-wrapper">
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <iframe
+                src="https://claude.site/public/artifacts/7625d045-605a-4cf2-9887-80263bdf5940/embed"
+                title="RepRally AI Reorder Assistant"
+                width="100%"
+                height="100%"
+                frameborder="0"
+                allow="clipboard-write"
+                allowfullscreen>
+              </iframe>
             </div>
-          </section>
-      
+            <div class="phone-label">RepRally AI · Reorder Assistant</div>
+          </div>
+        </div>
 
-    <!-- SLIDE 6: SUMMARY -->
+        <article class="solution-card">
+          <div class="pill-header">Slide 6 · Future · RepRally AI</div>
+          <h1>“What Should I Restock Today?”</h1>
+          <p class="subtitle">
+            Voice-first assistant that turns manual browsing into AI-guided, bundle-based reordering.
+          </p>
+
+          <div class="solution-scroll">
+            <h2>Experience Flow</h2>
+            <ul>
+              <li><strong>Listening</strong> — “Hey RepRally AI, what should I restock today?”</li>
+              <li><strong>Analysis</strong> — checks stockout risk, velocity, trends, peer spikes, weather.</li>
+              <li><strong>Summary</strong> — cards for “Don’t run out”, “Maximize profit”, “Trending near you”, “Weather demand alert”.</li>
+            </ul>
+
+            <h2>What RepRally AI Optimizes</h2>
+            <ul>
+              <li><strong>Low-stock prediction</strong> — “days left” per SKU, confidence threshold.</li>
+              <li><strong>High-margin picks</strong> — margin × units sold, uplift vs current substitutes, promos.</li>
+              <li><strong>Trend & micro-segment intelligence</strong> — neighborhood type, maps meta, peer demand.</li>
+              <li><strong>Weather & seasonal effects</strong> — heatwaves, rain, sports events, etc.</li>
+              <li><strong>Voice-to-order</strong> — “reorder my best-sellers”, “show high-margin SKUs”, “what’s trending near me?”.</li>
+            </ul>
+
+            <h2>Business Metrics</h2>
+            <ul>
+              <li><strong>AI-initiated reorder GMV</strong> — revenue driven by the assistant.</li>
+              <li><strong>% of reorders started via AI / voice</strong> — assistant adoption.</li>
+              <li><strong>Bundle attach rate</strong> — uplift from suggested adds.</li>
+              <li><strong>Time to complete reorder</strong> — seconds from prompt to order submitted.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SLIDE 7: SUMMARY -->
     <section class="slide">
       <div class="slide-inner">
         <div class="text-card">
-          <div class="eyebrow">Slide 6 · Interview-style Summary</div>
+          <div class="eyebrow">Slide 7 · Summary</div>
           <h1>How This System Serves Carlos — and RepRally</h1>
           <div class="text-scroll">
             <p>
@@ -675,9 +723,9 @@
               <li>Higher GMV & retention → more brands, better assortment, stronger marketplace.</li>
             </ul>
 
-            <p style="margin-top:16px;">
-              Thank you for reviewing this case study. I’d be happy to walk deeper into tradeoffs,
-              metrics, and how I’d phase this with engineering, data science, and sales.
+            <p style="margin-top: 18px;">
+                <strong>Thank you for reviewing this case study. I’d be happy to walk deeper into tradeoffs,
+              metrics, and how I’d phase this with engineering, data science, and sales.</strong>
             </p>
           </div>
         </div>
